@@ -1,0 +1,140 @@
+*,
+*::before
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header.navbar-container {
+  width: 100%;
+  max-width: 1350px;
+  padding-block: 1rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9999;
+
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar-container:hover {
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.75);
+}
+
+.navbar-container .logo img {
+  width: 100px;
+}
+
+.navbar-container .nav-list ul{
+  padding-left: 0;
+  list-style: none;
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+}
+
+.navbar-container .nav-list li {
+  float: left;
+}
+
+.navbar-container .nav-list li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-container .nav-list li:hover a {
+  background-color: #425c77;
+  color: rgb(250, 247, 247);
+}
+
+/* CONTENT */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+article img {
+  min-height: 450px;
+  width: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+  object-position: center;
+}
+
+article p {
+  margin-top: 20px;
+  text-indent: 20px;
+}
+
+article h3 {
+  padding: 10px;
+}
+
+article {
+  padding: 5px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 3px;
+}
+
+aside {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+aside img {
+  width: 150px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(141, 78, 33);
+  margin-top: 5px;
+}
+
+@media all and (max-width: 1000px) {
+  ul {
+    width: 100%;
+    box-sizing: flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  ul li {
+    display: inline-block;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  aside h3, table {
+    text-align: center;
+  }
+  table {
+    margin: auto;
+  }
+}
